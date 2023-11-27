@@ -75,4 +75,14 @@ public class Renderer {
 
     return new Scene(orbs, new Camera(720, 650));
   }
+  public Scene getUpdateScene(double v1x, double v1y, double v1z, double v1r, double v2x, double v2y, double v2z, double v2r, double v3x, double v3y, double v3z, double v3r, int vectorX, int vectorY, int vectorZ) {
+    Vector<Sphere> orbs = new Vector<>();
+
+    orbs.add(new Sphere(new Vector3D(v1x, v1y, v1z), v1r));
+    orbs.add(new Sphere(new Vector3D(v2x, v2y, v2z), v2r));
+    orbs.add(new Sphere(new Vector3D(v3x, v3y, v3z), v3r));
+
+    return new Scene(orbs, new Camera(720, 650, vectorX, vectorY, vectorZ));
+  }
+  
 }
