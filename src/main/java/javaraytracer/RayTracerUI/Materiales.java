@@ -39,9 +39,11 @@ public class Materiales extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        tm1 = new javax.swing.JComboBox<>();
         panel1 = new java.awt.Panel();
         jCheckBox1 = new javax.swing.JCheckBox();
+        txtf1 = new javax.swing.JTextField();
+        f1 = new javax.swing.JLabel();
         Material2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -52,10 +54,10 @@ public class Materiales extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        tm2 = new javax.swing.JComboBox<>();
         panel2 = new java.awt.Panel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        f2 = new javax.swing.JLabel();
+        txtf2 = new javax.swing.JTextField();
         jCheckBox2 = new javax.swing.JCheckBox();
         Material3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -67,13 +69,12 @@ public class Materiales extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        tm3 = new javax.swing.JComboBox<>();
         panel3 = new java.awt.Panel();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        f3 = new javax.swing.JLabel();
+        txtf3 = new javax.swing.JTextField();
         jCheckBox3 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setFocusCycleRoot(false);
         setPreferredSize(new java.awt.Dimension(480, 690));
@@ -94,21 +95,39 @@ public class Materiales extends javax.swing.JFrame {
         jLabel4.setText("R");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+
+        jTextField1.setText("55");
         Material1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
 
         jLabel5.setText("G");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+
+        jTextField2.setText("55");
         Material1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
 
         jLabel6.setText("B");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+
+        jTextField3.setText("55");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
         Material1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+
+        jTextField4.setText("Hierro");
         Material1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
-        Material1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
+        tm1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
+        tm1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                tm1ItemStateChanged(evt);
+            }
+        });
+        Material1.add(tm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -131,6 +150,13 @@ public class Materiales extends javax.swing.JFrame {
         });
         Material1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
+        txtf1.setText("0");
+        Material1.add(txtf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 33, -1));
+
+        f1.setText("F");
+        f1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Material1.add(f1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+
         getContentPane().add(Material1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 160));
 
         Material2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -147,21 +173,34 @@ public class Materiales extends javax.swing.JFrame {
         jLabel9.setText("R");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+
+        jTextField5.setText("123");
         Material2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
 
         jLabel10.setText("G");
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+
+        jTextField6.setText("123");
         Material2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
 
         jLabel11.setText("B");
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+
+        jTextField7.setText("123");
         Material2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+
+        jTextField8.setText("Granito");
         Material2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
-        Material2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
+        tm2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
+        tm2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                tm2ItemStateChanged(evt);
+            }
+        });
+        Material2.add(tm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
         panel2.setLayout(panel2Layout);
@@ -176,10 +215,12 @@ public class Materiales extends javax.swing.JFrame {
 
         Material2.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
 
-        jLabel12.setText("F");
-        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 135, -1, -1));
-        Material2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 132, 33, -1));
+        f2.setText("F");
+        f2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Material2.add(f2, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 135, -1, -1));
+
+        txtf2.setText("0");
+        Material2.add(txtf2, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 132, 33, -1));
 
         jCheckBox2.setText("Activar");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -205,21 +246,39 @@ public class Materiales extends javax.swing.JFrame {
         jLabel15.setText("R");
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+
+        jTextField10.setText("201");
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         Material3.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
 
         jLabel16.setText("G");
         jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+
+        jTextField11.setText("201");
         Material3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
 
         jLabel17.setText("B");
         jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Material3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+
+        jTextField12.setText("201");
         Material3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+
+        jTextField13.setText("Iman");
         Material3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
-        Material3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
+        tm3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
+        tm3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                tm3ItemStateChanged(evt);
+            }
+        });
+        Material3.add(tm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
         panel3.setLayout(panel3Layout);
@@ -234,10 +293,12 @@ public class Materiales extends javax.swing.JFrame {
 
         Material3.add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
 
-        jLabel18.setText("F");
-        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 131, -1, -1));
-        Material3.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 128, 33, -1));
+        f3.setText("F");
+        f3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Material3.add(f3, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 131, -1, -1));
+
+        txtf3.setText("0");
+        Material3.add(txtf3, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 128, 33, -1));
 
         jCheckBox3.setText("Activar");
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -257,9 +318,6 @@ public class Materiales extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, -1, -1));
 
-        jButton2.setText("Cancelar");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, -1, -1));
-
         getAccessibleContext().setAccessibleName("Materiales");
 
         pack();
@@ -278,9 +336,38 @@ public class Materiales extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void tm1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tm1ItemStateChanged
+       if(tm1.getItemAt(1)!= "Metal"){
+           f1.setVisible(false);
+           txtf2.setVisible(false);
+       }
+    }//GEN-LAST:event_tm1ItemStateChanged
+
+    private void tm2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tm2ItemStateChanged
+        if(tm3.getItemAt(1)!= "Metal"){
+           f2.setVisible(false);
+           txtf2.setVisible(false);
+       }
+    }//GEN-LAST:event_tm2ItemStateChanged
+
+    private void tm3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tm3ItemStateChanged
+       if(tm3.getItemAt(1)!= "Metal"){
+           f3.setVisible(false);
+           txtf3.setVisible(false);
+       }
+    }//GEN-LAST:event_tm3ItemStateChanged
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -321,23 +408,20 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JPanel Material1;
     private javax.swing.JPanel Material2;
     private javax.swing.JPanel Material3;
+    private javax.swing.JLabel f1;
+    private javax.swing.JLabel f2;
+    private javax.swing.JLabel f3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -351,7 +435,6 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -359,9 +442,14 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private java.awt.Panel panel3;
+    private javax.swing.JComboBox<String> tm1;
+    private javax.swing.JComboBox<String> tm2;
+    private javax.swing.JComboBox<String> tm3;
+    private javax.swing.JTextField txtf1;
+    private javax.swing.JTextField txtf2;
+    private javax.swing.JTextField txtf3;
     // End of variables declaration//GEN-END:variables
 }
