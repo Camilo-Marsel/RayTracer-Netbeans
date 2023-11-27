@@ -73,6 +73,7 @@ public class Materiales extends javax.swing.JFrame {
         jTextField14 = new javax.swing.JTextField();
         jCheckBox3 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setFocusCycleRoot(false);
         setPreferredSize(new java.awt.Dimension(480, 690));
@@ -106,7 +107,7 @@ public class Materiales extends javax.swing.JFrame {
         Material1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
         Material1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         Material1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
@@ -159,7 +160,7 @@ public class Materiales extends javax.swing.JFrame {
         Material2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
         Material2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         Material2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
@@ -217,7 +218,7 @@ public class Materiales extends javax.swing.JFrame {
         Material3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
         Material3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         Material3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
@@ -254,7 +255,10 @@ public class Materiales extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, -1, -1));
+
+        jButton2.setText("Cancelar");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, -1, -1));
 
         getAccessibleContext().setAccessibleName("Materiales");
 
@@ -318,6 +322,7 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JPanel Material2;
     private javax.swing.JPanel Material3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
