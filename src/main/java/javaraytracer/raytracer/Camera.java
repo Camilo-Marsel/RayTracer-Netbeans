@@ -15,4 +15,12 @@ public class Camera extends Entity {
     this.imageHeight = imageHeight;
     this.viewport = new Viewport(this);
   }
+  public Camera(int imageWidth, int imageHeight, int vectorX, int vectorY, int vectorZ) {
+    // TODO: make this dynamic
+    super(new Vector3D(vectorX, vectorY, vectorZ));
+    this.direction = new UnitVector3D(0, -1, 0);
+    this.imageWidth = imageWidth;
+    this.imageHeight = imageHeight;
+    this.viewport = new Viewport(this);
+  }
 }
