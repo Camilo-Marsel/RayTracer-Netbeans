@@ -351,6 +351,11 @@ public class RayTracerUI extends javax.swing.JFrame {
         esfera2.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
         e2activa.setText("Activar");
+        e2activa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                e2activaActionPerformed(evt);
+            }
+        });
         esfera2.add(e2activa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
         PanelEsferas.add(esfera2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 360, 100));
@@ -442,6 +447,11 @@ public class RayTracerUI extends javax.swing.JFrame {
         esfera3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
         e3activa.setText("Activar");
+        e3activa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                e3activaActionPerformed(evt);
+            }
+        });
         esfera3.add(e3activa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
         PanelEsferas.add(esfera3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 360, 100));
@@ -653,7 +663,7 @@ public class RayTracerUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void e1activaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e1activaActionPerformed
-        // TODO add your handling code here:
+ imagen();
     }//GEN-LAST:event_e1activaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -678,77 +688,77 @@ public class RayTracerUI extends javax.swing.JFrame {
 
     private void txt_e1rKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1rKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e1rKeyTyped
 
     private void txt_e1xKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1xKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e1xKeyTyped
 
     private void txt_e1yKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1yKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e1yKeyTyped
 
     private void txt_e1zKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1zKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e1zKeyTyped
 
     private void txt_e2xKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e2xKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e2xKeyTyped
 
     private void txt_e2yKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e2yKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e2yKeyTyped
 
     private void txt_e2zKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e2zKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e2zKeyTyped
 
     private void txt_e2rKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e2rKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e2rKeyTyped
 
     private void txt_e3xKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e3xKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e3xKeyTyped
 
     private void txt_e3yKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e3yKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e3yKeyTyped
 
     private void txt_e3zKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e3zKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
     }//GEN-LAST:event_txt_e3zKeyTyped
@@ -756,46 +766,46 @@ public class RayTracerUI extends javax.swing.JFrame {
     private void txt_e3rKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e3rKeyTyped
         if (evt.getExtendedKeyCode()==VK_ENTER) imagen();
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();      
     }//GEN-LAST:event_txt_e3rKeyTyped
 
     private void txt_Cx1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Cx1KeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
     }//GEN-LAST:event_txt_Cx1KeyTyped
 
     private void txt_Cy1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Cy1KeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
     }//GEN-LAST:event_txt_Cy1KeyTyped
 
     private void txt_Cz1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Cz1KeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 165);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();
     }//GEN-LAST:event_txt_Cz1KeyTyped
 
     private void txt_RxKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_RxKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46) || (key == 45);
         if(!numero)evt.consume();    }//GEN-LAST:event_txt_RxKeyTyped
 
     private void txt_RyKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_RyKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46)|| (key == 45);
         if(!numero)evt.consume();    }//GEN-LAST:event_txt_RyKeyTyped
 
     private void txt_RzKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_RzKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46)|| (key == 45);
         if(!numero)evt.consume();    }//GEN-LAST:event_txt_RzKeyTyped
 
     private void VerticalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VerticalKeyTyped
         int key = evt.getKeyChar();
-        boolean numero = (key >= 48 && key <=57)|| (key == 46);
+        boolean numero = (key >= 48 && key <=57)|| (key == 46)|| (key == 45);
         if(!numero)evt.consume();    }//GEN-LAST:event_VerticalKeyTyped
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -893,6 +903,14 @@ public class RayTracerUI extends javax.swing.JFrame {
     private void txt_e1zKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1zKeyPressed
        if (evt.getExtendedKeyCode()==VK_ENTER) imagen();  
     }//GEN-LAST:event_txt_e1zKeyPressed
+
+    private void e2activaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e2activaActionPerformed
+     imagen();        // TODO add your handling code here:
+    }//GEN-LAST:event_e2activaActionPerformed
+
+    private void e3activaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e3activaActionPerformed
+     imagen();        // TODO add your handling code here:
+    }//GEN-LAST:event_e3activaActionPerformed
     
     /**
      * @param args the command line arguments
@@ -971,9 +989,16 @@ private void imagen(){
             v3r =0;
         }
         if(!txt_Cx1.getText().equals("0") || !txt_Cy1.getText().equals("0") ||!txt_Cz1.getText().equals("0")){
-            this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()));
+            if(!txt_Rx.getText().equals("0") || !txt_Ry.getText().equals("0") || !txt_Rz.getText().equals("0")){
+                this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()),Integer.parseInt(txt_Rx.getText()),Integer.parseInt(txt_Ry.getText()),Integer.parseInt(txt_Rz.getText()));
             BufferedImage renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
+            }else{
+            this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()));
+            BufferedImage renderBuffer = renderer.render(this.scene);
+            this.lb_imagen.setIcon(new ImageIcon(renderBuffer)); 
+            }
+
         }else{
             this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r);
             BufferedImage renderBuffer = renderer.render(this.scene);
