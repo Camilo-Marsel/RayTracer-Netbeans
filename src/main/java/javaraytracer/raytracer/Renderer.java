@@ -16,6 +16,19 @@ public class Renderer {
   public BufferedImage render(Scene scene) {
     int imageWidth = scene.camera.imageWidth;
     int imageHeight = scene.camera.imageHeight;
+//    int InicialX1;
+//    int InicialX2;
+//    int InicialX3;
+//    int InicialY1;
+//    int InicialY2;
+//    int InicialY3;
+//    int InicialZ1;
+//    int InicialZ2;
+//    int InicialZ3;
+//    int InicialR1;
+//    int InicialR2;
+//    int InicialR3;
+
     BufferedImage image = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_RGB);
 
     Vector<Ray> rays = scene.camera.viewport.getRays();
