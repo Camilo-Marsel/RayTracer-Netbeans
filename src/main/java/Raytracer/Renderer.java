@@ -1,5 +1,6 @@
 package Raytracer;
 
+import RaytracerUI.Configuracion;
 import RaytracerUI.Materiales;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -91,5 +92,10 @@ public class Renderer {
     Materiales ma = new Materiales();
     public void materiales(){
       ma.setVisible(true);
+    }
+  //configuracion UI
+    Configuracion co = new Configuracion();
+    public void configuracion(){
+      co.setVisible(true);
     }
 }

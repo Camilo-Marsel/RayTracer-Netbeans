@@ -33,14 +33,16 @@ public class RayTracerUI extends javax.swing.JFrame {
         File archivo;
         byte[] imagen;
         FileOutputStream salida;
-        Config config = new Config(Integer.parseInt(Configuracion.Ancho.getText()), Double.parseDouble(Configuracion.aspecto.getText()), Integer.parseInt(Configuracion.pixel.getText()), 50); 
+        Config config = new Config(Integer.parseInt(Configuracion.Ancho.getText()), Double.parseDouble(Configuracion.aspecto.getText()), Integer.parseInt(Configuracion.pixel.getText()), 20); 
     public RayTracerUI(Renderer renderer) {
         initComponents();
+        
         this.renderer = renderer;
+        e1activa.doClick();
+        e2activa.doClick();
+        e3activa.doClick();
         imagen();
-        //e1activa.doClick();
-        //e2activa.doClick();
-        //e3activa.doClick();
+
         
        
         
@@ -106,6 +108,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         e3activa = new javax.swing.JCheckBox();
+        base = new javax.swing.JCheckBox();
         PanelCamara = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txt_Cz1 = new javax.swing.JTextField();
@@ -469,6 +472,14 @@ public class RayTracerUI extends javax.swing.JFrame {
 
         PanelEsferas.add(esfera3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 360, 100));
 
+        base.setText("Base");
+        base.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                baseActionPerformed(evt);
+            }
+        });
+        PanelEsferas.add(base, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, -1, -1));
+
         Principal.add(PanelEsferas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 450, 360));
 
         PanelCamara.setBackground(new java.awt.Color(246, 255, 255));
@@ -591,6 +602,11 @@ public class RayTracerUI extends javax.swing.JFrame {
         jMenu1.setText("Principal");
 
         jMenuItem1.setText("Nuevo Renderizado");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Guardar Renderizado");
@@ -827,8 +843,7 @@ public class RayTracerUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        Configuracion form = new Configuracion();
-        form.setVisible(true);
+        renderer.configuracion();
         //this.dispose();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
@@ -845,7 +860,7 @@ public class RayTracerUI extends javax.swing.JFrame {
 //            
 //        }
 
-Guardar();
+JOptionPane.showMessageDialog(null, "Error 404, funcionalidad en construcion");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void txt_e1rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_e1rActionPerformed
@@ -936,6 +951,16 @@ Guardar();
     private void e3activaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e3activaActionPerformed
      imagen();        // TODO add your handling code here:
     }//GEN-LAST:event_e3activaActionPerformed
+
+    private void baseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baseActionPerformed
+        imagen();
+    }//GEN-LAST:event_baseActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        RayTracerUI ui2 = new RayTracerUI(renderer);
+        
+        ui2.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1014,40 +1039,38 @@ private void imagen(){
             v3z =0;
             v3r =0;
         }
+        
             Cx=Double.parseDouble(txt_Cx1.getText());
             Cy=Double.parseDouble(txt_Cy1.getText());
             Cz=Double.parseDouble(txt_Cz1.getText());
             Rx=Double.parseDouble(txt_Rx.getText());
             Ry=Double.parseDouble(txt_Ry.getText());
             Rz=Double.parseDouble(txt_Rz.getText());
-            this.scene = Scene.getUpdateScene(false, config, v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r,  Cx, Cy, Cz, Rx, Ry, Rz);
+            if(base.isSelected()){
+                siono = true;
+            }else{
+                siono=false;
+            }
+            config = new Config(Integer.parseInt(Configuracion.Ancho.getText()), Double.parseDouble(Configuracion.aspecto.getText()), Integer.parseInt(Configuracion.pixel.getText()), 20);
+            this.scene = Scene.getUpdateScene(siono, config, v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r,  Cx, Cy, Cz, Rx, Ry, Rz);
             renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
             
       
     }
 }
-public String Guardar(){
-    String mensaje= null;
-    try{
-         
-        ImageIO.write(renderBuffer, "PNG", archivo);
-       
-    }catch (Exception e){
-        
-    }
-    return mensaje;
-    
-}
+
 private BufferedImage renderBuffer;
 private double v1r,  v2r,  v3r, v1x,  v1y,  v1z,  v2x,  v2y,  v2z, v3x, v3y, v3z,Cx,Cy,Cz,Rx,Ry,Rz;
 private final Renderer renderer;
 private Scene scene;
+private boolean siono;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelCamara;
     private javax.swing.JPanel PanelEsferas;
     private javax.swing.JPanel Principal;
     private javax.swing.JTextField Vertical;
+    private javax.swing.JCheckBox base;
     private javax.swing.JCheckBox e1activa;
     private javax.swing.JCheckBox e2activa;
     private javax.swing.JCheckBox e3activa;

@@ -15,7 +15,7 @@ public class Configuracion extends javax.swing.JFrame {
      */
     public Configuracion() {
         initComponents();
-     
+     this.setVisible(false);
     }
 
     /**
@@ -48,7 +48,7 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel1.setText("Ancho");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 20));
 
-        Ancho.setText("250");
+        Ancho.setText("500");
         Ancho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnchoActionPerformed(evt);
@@ -64,7 +64,7 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel2.setText("Relacion de aspecto");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, 20));
 
-        aspecto.setText("16.0 / 9.0");
+        aspecto.setText("1.777777778");
         aspecto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aspectoActionPerformed(evt);
@@ -121,8 +121,7 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_pixelActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Ancho.setText(Integer.toString(super.getWidth()));
-    aspecto.setText(Integer.toString(super.getHeight()));
+    this.setVisible(false);
     
     }//GEN-LAST:event_jButton1ActionPerformed
 
