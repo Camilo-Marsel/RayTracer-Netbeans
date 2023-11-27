@@ -18,6 +18,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar Renderizado"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -33,6 +36,27 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Configuracion"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu3">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Materiales"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenu3ActionPerformed"/>
+          </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+              <Properties>
+                <Property name="label" type="java.lang.String" value="Materiales"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem4ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -92,6 +116,9 @@
               </Border>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Principal"/>
+          </AccessibilityProperties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="1150" height="690"/>
@@ -167,10 +194,13 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Esefera 1"/>
+                        <TitledBorder title="Esfera 1"/>
                       </Border>
                     </Property>
                   </Properties>
+                  <AccessibilityProperties>
+                    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Esfera 1"/>
+                  </AccessibilityProperties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="10" y="10" width="360" height="100"/>
@@ -192,15 +222,13 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1r">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0.5"/>
-                      </Properties>
                       <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e1rActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e1rKeyTyped"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="140" y="40" width="50" height="20"/>
+                          <AbsoluteConstraints x="140" y="40" width="30" height="20"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -225,9 +253,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1y">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="-2"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e1yActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e1yKeyTyped"/>
@@ -249,9 +274,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1z">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e1zKeyTyped"/>
                       </Events>
@@ -272,10 +294,8 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1x">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="1"/>
-                      </Properties>
                       <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e1xActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e1xKeyTyped"/>
                       </Events>
                       <Constraints>
@@ -385,16 +405,12 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e2r">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="1.2"/>
-                      </Properties>
                       <Events>
-                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2rKeyPressed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2rKeyTyped"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="140" y="40" width="40" height="20"/>
+                          <AbsoluteConstraints x="140" y="40" width="30" height="20"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -419,9 +435,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e2y">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2yKeyTyped"/>
                       </Events>
@@ -442,11 +455,7 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e2z">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="-1"/>
-                      </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e2zActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2zKeyTyped"/>
                       </Events>
                       <Constraints>
@@ -466,9 +475,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e2x">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="-1"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2xKeyTyped"/>
                       </Events>
@@ -480,8 +486,7 @@
                     </Component>
                     <Component class="javax.swing.JSlider" name="radioBar2">
                       <Properties>
-                        <Property name="maximum" type="int" value="10"/>
-                        <Property name="value" type="int" value="5"/>
+                        <Property name="value" type="int" value="10"/>
                       </Properties>
                       <Events>
                         <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="radioBar2StateChanged"/>
@@ -544,10 +549,13 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Esefera 3"/>
+                        <TitledBorder title="Esfera 3"/>
                       </Border>
                     </Property>
                   </Properties>
+                  <AccessibilityProperties>
+                    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Esfera 3"/>
+                  </AccessibilityProperties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="10" y="210" width="360" height="100"/>
@@ -569,16 +577,12 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3r">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0.2"/>
-                      </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e3rActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3rKeyTyped"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="140" y="40" width="50" height="20"/>
+                          <AbsoluteConstraints x="140" y="40" width="30" height="20"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -603,9 +607,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3y">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="-2"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3yKeyTyped"/>
                       </Events>
@@ -626,9 +627,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3z">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3zKeyTyped"/>
                       </Events>
@@ -649,9 +647,6 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3x">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
-                      </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3xKeyTyped"/>
                       </Events>
@@ -663,8 +658,7 @@
                     </Component>
                     <Component class="javax.swing.JSlider" name="radioBar3">
                       <Properties>
-                        <Property name="maximum" type="int" value="10"/>
-                        <Property name="value" type="int" value="5"/>
+                        <Property name="value" type="int" value="10"/>
                       </Properties>
                       <Events>
                         <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="radioBar3StateChanged"/>
@@ -754,9 +748,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3z1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3z1KeyTyped"/>
                   </Events>
@@ -777,9 +768,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3y1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3y1KeyTyped"/>
                   </Events>
@@ -810,9 +798,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3x1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3x1KeyTyped"/>
                   </Events>
@@ -833,9 +818,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3x2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3x2KeyTyped"/>
                   </Events>
@@ -866,9 +848,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3y2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3y2KeyTyped"/>
                   </Events>
@@ -889,9 +868,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_e3z2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3z2KeyTyped"/>
                   </Events>
@@ -942,9 +918,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField1KeyTyped"/>
                   </Events>
@@ -955,9 +928,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField2KeyTyped"/>
                   </Events>
@@ -983,26 +953,6 @@
               </Constraints>
             </Component>
           </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel1">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="1150" height="690"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1150" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="690" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
         </Container>
       </SubComponents>
     </Container>
