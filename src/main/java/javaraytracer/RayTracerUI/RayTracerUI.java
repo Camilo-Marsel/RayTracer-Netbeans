@@ -6,11 +6,17 @@ package javaraytracer.RayTracerUI;
 
 import static java.awt.event.KeyEvent.VK_ENTER;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import javaraytracer.raytracer.Renderer;
 import javaraytracer.raytracer.Scene;
 import javax.swing.ImageIcon;
 import javaraytracer.raytracer.Controlador;
+import javaraytracer.raytracer.RayTracer;
+import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -22,11 +28,15 @@ public class RayTracerUI extends javax.swing.JFrame {
     /**
      * Creates new form RayTracerUI
      */
-    
+        JFileChooser seleccionar = new JFileChooser();
+        File archivo;
+        byte[] imagen;
+        FileOutputStream salida;
     public RayTracerUI(Renderer renderer) {
         initComponents();
         this.renderer = renderer;
         imagen();
+
        
         
     }
@@ -809,9 +819,8 @@ public class RayTracerUI extends javax.swing.JFrame {
         if(!numero)evt.consume();    }//GEN-LAST:event_VerticalKeyTyped
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        Materiales form = new Materiales();
-        form.setVisible(true);
-        
+renderer.materiales();
+    
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -821,7 +830,19 @@ public class RayTracerUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-       // TODO add your handling code here:
+//        if(seleccionar.showDialog(null, "Guardar")==JFileChooser.APPROVE_OPTION){
+//            archivo=seleccionar.getSelectedFile();
+//            
+//                String respuesta = Guardar();
+//                if (respuesta!=null) {
+//                    JOptionPane.showMessageDialog(null, respuesta);
+//                }else{
+//                    JOptionPane.showMessageDialog(null, "Archivo no guardado");
+//                }
+//            
+//        }
+
+Guardar();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void txt_e1rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_e1rActionPerformed
@@ -837,7 +858,7 @@ public class RayTracerUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_e1yActionPerformed
 
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
-        // TODO add your handling code here:
+       renderer.materiales();
     }//GEN-LAST:event_jMenu3ActionPerformed
 
     private void txt_e2xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_e2xActionPerformed
@@ -948,7 +969,7 @@ public class RayTracerUI extends javax.swing.JFrame {
 private void imagen(){
     if (this.scene == null) {
       this.scene = renderer.getSampleScene();
-      BufferedImage renderBuffer = renderer.render(this.scene);
+      renderBuffer = renderer.render(this.scene);
       this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
     }else {
         
@@ -991,22 +1012,35 @@ private void imagen(){
         if(!txt_Cx1.getText().equals("0") || !txt_Cy1.getText().equals("0") ||!txt_Cz1.getText().equals("0")){
             if(!txt_Rx.getText().equals("0") || !txt_Ry.getText().equals("0") || !txt_Rz.getText().equals("0")){
                 this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()),Integer.parseInt(txt_Rx.getText()),Integer.parseInt(txt_Ry.getText()),Integer.parseInt(txt_Rz.getText()));
-            BufferedImage renderBuffer = renderer.render(this.scene);
+            renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
             }else{
             this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()));
-            BufferedImage renderBuffer = renderer.render(this.scene);
+            renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer)); 
             }
 
         }else{
             this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r);
-            BufferedImage renderBuffer = renderer.render(this.scene);
+            renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));  
         }
       
     }
 }
+public String Guardar(){
+    String mensaje= null;
+    try{
+         
+        ImageIO.write(renderBuffer, "PNG", archivo);
+       
+    }catch (Exception e){
+        
+    }
+    return mensaje;
+    
+}
+private BufferedImage renderBuffer;
 private double v1r,  v2r,  v3r, v1x,  v1y,  v1z,  v2x,  v2y,  v2z, v3x, v3y, v3z;
 private final Renderer renderer;
 private Scene scene;
