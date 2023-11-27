@@ -3,6 +3,7 @@
  */
 
 package javaraytracer.raytracer;
+import javaraytracer.RayTracerUI.Materiales;
 import javaraytracer.RayTracerUI.RayTracerUI;
 /**
  *
