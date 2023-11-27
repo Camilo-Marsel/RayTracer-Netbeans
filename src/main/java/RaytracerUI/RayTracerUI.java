@@ -14,6 +14,7 @@ import Raytracer.Scene;
 import javax.swing.ImageIcon;
 import Raytracer.RayTracer;
 import Raytracer.Camera;
+import Raytracer.Config;
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -962,11 +963,10 @@ Guardar();
     }
 private void imagen(){
     if (this.scene == null) {
-        
-      Camera camera = new Camera();
-      this.scene = new Scene();
-      renderBuffer = renderer.render(this.scene);
-      this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
+        Config config = new Config(1000, 16.0 / 9.0, 100, 50); 
+        this.scene = Scene.getSampleScene(config);
+        renderBuffer = renderer.render(this.scene);
+        this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
     }else {
         
         if(e1activa.isSelected()){
