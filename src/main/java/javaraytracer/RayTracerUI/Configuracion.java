@@ -61,17 +61,17 @@ public class Configuracion extends javax.swing.JFrame {
         });
         jPanel1.add(AnchotxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 90, -1));
 
-        jLabel2.setText("Alto");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, 20));
+        jLabel2.setText("Relacion de aspecto");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, 20));
 
         Altotxtfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AltotxtfieldActionPerformed(evt);
             }
         });
-        jPanel1.add(Altotxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 100, -1));
+        jPanel1.add(Altotxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 100, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 80));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 420, 80));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Calidad"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,7 +93,7 @@ public class Configuracion extends javax.swing.JFrame {
         });
         jPanel2.add(Pixeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 40, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 360, 100));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 420, 100));
 
         jButton1.setText("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,10 +111,6 @@ public class Configuracion extends javax.swing.JFrame {
     private void AnchotxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnchotxtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AnchotxtFieldActionPerformed
-
-    private void AltotxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltotxtfieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltotxtfieldActionPerformed
 
     private void PixeltxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PixeltxtActionPerformed
         // TODO add your handling code here:
@@ -134,6 +130,10 @@ public class Configuracion extends javax.swing.JFrame {
     Pixeltxt.setText(Integer.toString(PixelBar.getValue()));
     // TODO add your handling code here:
     }//GEN-LAST:event_PixelBarStateChanged
+
+    private void AltotxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltotxtfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltotxtfieldActionPerformed
 
     /**
      * @param args the command line arguments
