@@ -11,9 +11,11 @@ package javaraytracer.raytracer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Vector;
+import javaraytracer.RayTracerUI.Materiales;
 
 public class Renderer {
   public BufferedImage render(Scene scene) {
+      ma.setVisible(false);
     int imageWidth = scene.camera.imageWidth;
     int imageHeight = scene.camera.imageHeight;
 //    int InicialX1;
@@ -106,5 +108,10 @@ public class Renderer {
 
     return new Scene(orbs, new Camera(720, 650, vectorX, vectorY, vectorZ));
   }
+  Materiales ma = new Materiales();
+  public void materiales(){
+      ma.setVisible(true);
+  }
+        
   
 }
