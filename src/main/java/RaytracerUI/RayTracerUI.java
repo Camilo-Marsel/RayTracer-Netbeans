@@ -33,11 +33,15 @@ public class RayTracerUI extends javax.swing.JFrame {
         File archivo;
         byte[] imagen;
         FileOutputStream salida;
+        Config config = new Config(250, 16.0 / 9.0, 100, 50); 
     public RayTracerUI(Renderer renderer) {
         initComponents();
         this.renderer = renderer;
         imagen();
-
+        //e1activa.doClick();
+        //e2activa.doClick();
+        //e3activa.doClick();
+        
        
         
     }
@@ -140,6 +144,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         panelImagen.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelImagen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lb_imagen.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lb_imagen.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 lb_imagenAncestorAdded(evt);
@@ -158,6 +163,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         PanelEsferas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         esfera1.setBackground(new java.awt.Color(255, 255, 255));
+        esfera1.setBorder(javax.swing.BorderFactory.createTitledBorder("Esfera 1"));
         esfera1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Posicion:");
@@ -185,7 +191,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel4.setText("Y");
         esfera1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 10, -1));
 
-        txt_e1y.setText("-2");
+        txt_e1y.setText("0");
         txt_e1y.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_e1yActionPerformed(evt);
@@ -204,7 +210,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel5.setText("Z");
         esfera1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 10, -1));
 
-        txt_e1z.setText("1");
+        txt_e1z.setText("-1");
         txt_e1z.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e1zKeyPressed(evt);
@@ -218,7 +224,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel6.setText("Material:");
         esfera1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, -1));
 
-        txt_e1x.setText("1");
+        txt_e1x.setText("0");
         txt_e1x.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_e1xActionPerformed(evt);
@@ -267,12 +273,13 @@ public class RayTracerUI extends javax.swing.JFrame {
         PanelEsferas.add(esfera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 360, 100));
 
         esfera2.setBackground(new java.awt.Color(255, 255, 255));
+        esfera2.setBorder(javax.swing.BorderFactory.createTitledBorder("Esfera 2"));
         esfera2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel23.setText("Posicion:");
         esfera2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
-        txt_e2r.setText("1.2");
+        txt_e2r.setText("0.5");
         txt_e2r.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e2rKeyPressed(evt);
@@ -368,12 +375,13 @@ public class RayTracerUI extends javax.swing.JFrame {
         PanelEsferas.add(esfera2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 360, 100));
 
         esfera3.setBackground(new java.awt.Color(255, 255, 255));
+        esfera3.setBorder(javax.swing.BorderFactory.createTitledBorder("Esfera 3"));
         esfera3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setText("Posicion:");
         esfera3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
-        txt_e3r.setText("0.2");
+        txt_e3r.setText("0.5");
         txt_e3r.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e3rKeyPressed(evt);
@@ -390,7 +398,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel10.setText("Y");
         esfera3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 10, -1));
 
-        txt_e3y.setText("-2");
+        txt_e3y.setText("0");
         txt_e3y.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e3yKeyPressed(evt);
@@ -404,7 +412,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel11.setText("Z");
         esfera3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 10, -1));
 
-        txt_e3z.setText("0");
+        txt_e3z.setText("-1");
         txt_e3z.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e3zKeyPressed(evt);
@@ -418,7 +426,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel12.setText("Material:");
         esfera3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, -1));
 
-        txt_e3x.setText("0");
+        txt_e3x.setText("1");
         txt_e3x.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_e3xKeyPressed(evt);
@@ -464,12 +472,13 @@ public class RayTracerUI extends javax.swing.JFrame {
         Principal.add(PanelEsferas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 450, 360));
 
         PanelCamara.setBackground(new java.awt.Color(246, 255, 255));
+        PanelCamara.setBorder(javax.swing.BorderFactory.createTitledBorder("Camara"));
         PanelCamara.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Posicion de la camara:");
         PanelCamara.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
-        txt_Cz1.setText("0");
+        txt_Cz1.setText("1");
         txt_Cz1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_Cz1ActionPerformed(evt);
@@ -485,7 +494,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel16.setText("Z");
         PanelCamara.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 10, -1));
 
-        txt_Cy1.setText("0");
+        txt_Cy1.setText("2");
         txt_Cy1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_Cy1KeyTyped(evt);
@@ -499,7 +508,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel14.setText("X");
         PanelCamara.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 10, -1));
 
-        txt_Cx1.setText("0");
+        txt_Cx1.setText("-2");
         txt_Cx1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_Cx1KeyTyped(evt);
@@ -524,7 +533,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel19.setText("Y");
         PanelCamara.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 10, -1));
 
-        txt_Ry.setText("-1");
+        txt_Ry.setText("0");
         txt_Ry.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_RyKeyTyped(evt);
@@ -535,7 +544,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel20.setText("Z");
         PanelCamara.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 10, -1));
 
-        txt_Rz.setText("0");
+        txt_Rz.setText("-1");
         txt_Rz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_RzActionPerformed(evt);
@@ -557,7 +566,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         jLabel22.setText("Vertical:");
         PanelCamara.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
 
-        Vertical.setText("90");
+        Vertical.setText("20");
         Vertical.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 VerticalKeyTyped(evt);
@@ -677,17 +686,17 @@ public class RayTracerUI extends javax.swing.JFrame {
 
     private void radioBar1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_radioBar1StateChanged
         txt_e1r.setText(Integer.toString(radioBar1.getValue()));
-        imagen();
+        
     }//GEN-LAST:event_radioBar1StateChanged
 
     private void radioBar2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_radioBar2StateChanged
         txt_e2r.setText(Integer.toString(radioBar2.getValue()));
-        imagen();
+       
     }//GEN-LAST:event_radioBar2StateChanged
 
     private void radioBar3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_radioBar3StateChanged
         txt_e3r.setText(Integer.toString(radioBar3.getValue()));
-        imagen();
+       
     }//GEN-LAST:event_radioBar3StateChanged
 
     private void txt_e1rKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_e1rKeyTyped
@@ -814,7 +823,7 @@ public class RayTracerUI extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO
-        System.out.println("[TODO]: No ha sido implementado todavía");
+        renderer.materiales();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -963,7 +972,7 @@ Guardar();
     }
 private void imagen(){
     if (this.scene == null) {
-        Config config = new Config(1000, 16.0 / 9.0, 100, 50); 
+        
         this.scene = Scene.getSampleScene(config);
         renderBuffer = renderer.render(this.scene);
         this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
@@ -1005,22 +1014,16 @@ private void imagen(){
             v3z =0;
             v3r =0;
         }
-        if(!txt_Cx1.getText().equals("0") || !txt_Cy1.getText().equals("0") ||!txt_Cz1.getText().equals("0")){
-            if(!txt_Rx.getText().equals("0") || !txt_Ry.getText().equals("0") || !txt_Rz.getText().equals("0")){
-                this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()),Integer.parseInt(txt_Rx.getText()),Integer.parseInt(txt_Ry.getText()),Integer.parseInt(txt_Rz.getText()));
+            Cx=Double.parseDouble(txt_Cx1.getText());
+            Cy=Double.parseDouble(txt_Cy1.getText());
+            Cz=Double.parseDouble(txt_Cz1.getText());
+            Rx=Double.parseDouble(txt_Rx.getText());
+            Ry=Double.parseDouble(txt_Ry.getText());
+            Rz=Double.parseDouble(txt_Rz.getText());
+            this.scene = Scene.getUpdateScene(config, v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r,  Cx, Cy, Cz, Rx, Ry, Rz);
             renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
-            }else{
-            this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r, Integer.parseInt(txt_Cx1.getText()), Integer.parseInt(txt_Cy1.getText()), Integer.parseInt(txt_Cz1.getText()));
-            renderBuffer = renderer.render(this.scene);
-            this.lb_imagen.setIcon(new ImageIcon(renderBuffer)); 
-            }
-
-        }else{
-            this.scene = renderer.getUpdateScene(v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r);
-            renderBuffer = renderer.render(this.scene);
-            this.lb_imagen.setIcon(new ImageIcon(renderBuffer));  
-        }
+            
       
     }
 }
@@ -1037,7 +1040,7 @@ public String Guardar(){
     
 }
 private BufferedImage renderBuffer;
-private double v1r,  v2r,  v3r, v1x,  v1y,  v1z,  v2x,  v2y,  v2z, v3x, v3y, v3z;
+private double v1r,  v2r,  v3r, v1x,  v1y,  v1z,  v2x,  v2y,  v2z, v3x, v3y, v3z,Cx,Cy,Cz,Rx,Ry,Rz;
 private final Renderer renderer;
 private Scene scene;
     // Variables declaration - do not modify//GEN-BEGIN:variables

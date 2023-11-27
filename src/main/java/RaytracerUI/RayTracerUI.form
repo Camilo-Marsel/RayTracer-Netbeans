@@ -192,6 +192,11 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Esfera 1"/>
+                      </Border>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -250,7 +255,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1y">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="-2"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e1yActionPerformed"/>
@@ -275,7 +280,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1z">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="1"/>
+                        <Property name="text" type="java.lang.String" value="-1"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e1zKeyPressed"/>
@@ -299,7 +304,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e1x">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="1"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_e1xActionPerformed"/>
@@ -319,7 +324,7 @@
                         </Property>
                         <Property name="maximum" type="int" value="10"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Cursor Por defecto"/>
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="debugGraphicsOptions" type="int" value="-1"/>
                       </Properties>
@@ -385,6 +390,11 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Esfera 2"/>
+                      </Border>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -408,7 +418,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e2r">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="1.2"/>
+                        <Property name="text" type="java.lang.String" value="0.5"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e2rKeyPressed"/>
@@ -570,6 +580,11 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Esfera 3"/>
+                      </Border>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -593,7 +608,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3r">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="0.2"/>
+                        <Property name="text" type="java.lang.String" value="0.5"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3rKeyPressed"/>
@@ -627,7 +642,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3y">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="-2"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3yKeyPressed"/>
@@ -651,7 +666,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3z">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
+                        <Property name="text" type="java.lang.String" value="-1"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3zKeyPressed"/>
@@ -675,7 +690,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_e3x">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="0"/>
+                        <Property name="text" type="java.lang.String" value="1"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_e3xKeyPressed"/>
@@ -693,7 +708,7 @@
                         <Property name="paintLabels" type="boolean" value="true"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Cursor Por defecto"/>
+                          <Color id="Default Cursor"/>
                         </Property>
                       </Properties>
                       <Events>
@@ -760,6 +775,11 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="f6" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Camara"/>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -783,7 +803,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Cz1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
+                    <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_Cz1ActionPerformed"/>
@@ -807,7 +827,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Cy1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
+                    <Property name="text" type="java.lang.String" value="2"/>
                   </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Cy1KeyTyped"/>
@@ -840,7 +860,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Cx1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
+                    <Property name="text" type="java.lang.String" value="-2"/>
                   </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Cx1KeyTyped"/>
@@ -896,7 +916,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Ry">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="-1"/>
+                    <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_RyKeyTyped"/>
@@ -919,7 +939,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_Rz">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="0"/>
+                    <Property name="text" type="java.lang.String" value="-1"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_RzActionPerformed"/>
@@ -963,7 +983,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="Vertical">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="90"/>
+                    <Property name="text" type="java.lang.String" value="20"/>
                   </Properties>
                   <Events>
                     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="VerticalKeyTyped"/>
