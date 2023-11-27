@@ -29,13 +29,13 @@ public class Configuracion extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        AnchotxtField = new javax.swing.JTextField();
+        Ancho = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        Altotxtfield = new javax.swing.JTextField();
+        aspecto = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         PixelBar = new javax.swing.JSlider();
         jLabel5 = new javax.swing.JLabel();
-        Pixeltxt = new javax.swing.JTextField();
+        pixel = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(480, 690));
@@ -48,32 +48,37 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel1.setText("Ancho");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 20));
 
-        AnchotxtField.addActionListener(new java.awt.event.ActionListener() {
+        Ancho.setText("250");
+        Ancho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnchotxtFieldActionPerformed(evt);
+                AnchoActionPerformed(evt);
             }
         });
-        AnchotxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+        Ancho.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                AnchotxtFieldKeyTyped(evt);
+                AnchoKeyTyped(evt);
             }
         });
-        jPanel1.add(AnchotxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 90, -1));
+        jPanel1.add(Ancho, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 90, -1));
 
         jLabel2.setText("Relacion de aspecto");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, 20));
 
-        Altotxtfield.addActionListener(new java.awt.event.ActionListener() {
+        aspecto.setText("16.0 / 9.0");
+        aspecto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltotxtfieldActionPerformed(evt);
+                aspectoActionPerformed(evt);
             }
         });
-        jPanel1.add(Altotxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 100, -1));
+        jPanel1.add(aspecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 100, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 420, 80));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PixelBar.setMaximum(200);
+        PixelBar.setMinimum(10);
+        PixelBar.setValue(100);
         PixelBar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 PixelBarStateChanged(evt);
@@ -84,12 +89,13 @@ public class Configuracion extends javax.swing.JFrame {
         jLabel5.setText("Muestras por Pixel");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        Pixeltxt.addActionListener(new java.awt.event.ActionListener() {
+        pixel.setText("100");
+        pixel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PixeltxtActionPerformed(evt);
+                pixelActionPerformed(evt);
             }
         });
-        jPanel2.add(Pixeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 40, -1));
+        jPanel2.add(pixel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 40, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 420, 100));
 
@@ -106,32 +112,32 @@ public class Configuracion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AnchotxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnchotxtFieldActionPerformed
+    private void AnchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnchoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AnchotxtFieldActionPerformed
+    }//GEN-LAST:event_AnchoActionPerformed
 
-    private void PixeltxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PixeltxtActionPerformed
+    private void pixelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pixelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PixeltxtActionPerformed
+    }//GEN-LAST:event_pixelActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    AnchotxtField.setText(Integer.toString(super.getWidth()));
-    Altotxtfield.setText(Integer.toString(super.getHeight()));
+    Ancho.setText(Integer.toString(super.getWidth()));
+    aspecto.setText(Integer.toString(super.getHeight()));
     
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void AnchotxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AnchotxtFieldKeyTyped
+    private void AnchoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AnchoKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_AnchotxtFieldKeyTyped
+    }//GEN-LAST:event_AnchoKeyTyped
 
     private void PixelBarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PixelBarStateChanged
-    Pixeltxt.setText(Integer.toString(PixelBar.getValue()));
+    pixel.setText(Integer.toString(PixelBar.getValue()));
     // TODO add your handling code here:
     }//GEN-LAST:event_PixelBarStateChanged
 
-    private void AltotxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltotxtfieldActionPerformed
+    private void aspectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aspectoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AltotxtfieldActionPerformed
+    }//GEN-LAST:event_aspectoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,15 +175,15 @@ public class Configuracion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Altotxtfield;
-    private javax.swing.JTextField AnchotxtField;
+    public static javax.swing.JTextField Ancho;
     private javax.swing.JSlider PixelBar;
-    private javax.swing.JTextField Pixeltxt;
+    public static javax.swing.JTextField aspecto;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    public static javax.swing.JTextField pixel;
     // End of variables declaration//GEN-END:variables
 }

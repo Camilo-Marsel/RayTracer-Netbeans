@@ -33,47 +33,41 @@ public class Materiales extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        r1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        g1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        b1 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         tm1 = new javax.swing.JComboBox<>();
-        panel1 = new java.awt.Panel();
-        jCheckBox1 = new javax.swing.JCheckBox();
         txtf1 = new javax.swing.JTextField();
         f1 = new javax.swing.JLabel();
         Material2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        r2 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        g2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        b2 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         tm2 = new javax.swing.JComboBox<>();
-        panel2 = new java.awt.Panel();
         f2 = new javax.swing.JLabel();
         txtf2 = new javax.swing.JTextField();
-        jCheckBox2 = new javax.swing.JCheckBox();
         Material3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        r3 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        g3 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        b3 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         tm3 = new javax.swing.JComboBox<>();
-        panel3 = new java.awt.Panel();
         f3 = new javax.swing.JLabel();
         txtf3 = new javax.swing.JTextField();
-        jCheckBox3 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
 
         setFocusCycleRoot(false);
@@ -87,39 +81,39 @@ public class Materiales extends javax.swing.JFrame {
         Material1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Nombre");
-        Material1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 16, 56, -1));
+        Material1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 56, -1));
 
         jLabel3.setText("Tipo de material");
-        Material1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 59, 95, -1));
+        Material1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 95, -1));
 
         jLabel4.setText("R");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+        Material1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
-        jTextField1.setText("55");
-        Material1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
+        r1.setText("0.1");
+        Material1.add(r1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 33, -1));
 
         jLabel5.setText("G");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+        Material1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
-        jTextField2.setText("55");
-        Material1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
+        g1.setText("0.2");
+        Material1.add(g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 33, -1));
 
         jLabel6.setText("B");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+        Material1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
-        jTextField3.setText("55");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        b1.setText("0.5");
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
-        Material1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+        Material1.add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 33, -1));
 
         jTextField4.setText("Hierro");
-        Material1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
+        Material1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 92, -1));
 
         tm1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         tm1.addItemListener(new java.awt.event.ItemListener() {
@@ -127,37 +121,21 @@ public class Materiales extends javax.swing.JFrame {
                 tm1ItemStateChanged(evt);
             }
         });
-        Material1.add(tm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
-
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 147, Short.MAX_VALUE)
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-
-        Material1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
-
-        jCheckBox1.setText("Activar");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-        Material1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        Material1.add(tm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 90, -1));
 
         txtf1.setText("0");
-        Material1.add(txtf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 33, -1));
+        txtf1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtf1ActionPerformed(evt);
+            }
+        });
+        Material1.add(txtf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 33, -1));
 
         f1.setText("F");
         f1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material1.add(f1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+        Material1.add(f1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
-        getContentPane().add(Material1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 160));
+        getContentPane().add(Material1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, 160));
 
         Material2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Material2.setToolTipText("");
@@ -165,34 +143,39 @@ public class Materiales extends javax.swing.JFrame {
         Material2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setText("Nombre");
-        Material2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 16, 56, -1));
+        Material2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 56, -1));
 
         jLabel8.setText("Tipo de material");
-        Material2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 59, 95, -1));
+        Material2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 95, -1));
 
         jLabel9.setText("R");
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+        Material2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
-        jTextField5.setText("123");
-        Material2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
+        r2.setText("0.84");
+        r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r2ActionPerformed(evt);
+            }
+        });
+        Material2.add(r2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 40, -1));
 
         jLabel10.setText("G");
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+        Material2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, -1));
 
-        jTextField6.setText("123");
-        Material2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
+        g2.setText("0.06");
+        Material2.add(g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 40, -1));
 
         jLabel11.setText("B");
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+        Material2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 10, -1));
 
-        jTextField7.setText("123");
-        Material2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+        b2.setText("0.34");
+        Material2.add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 40, -1));
 
         jTextField8.setText("Granito");
-        Material2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
+        Material2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 92, -1));
 
         tm2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         tm2.addItemListener(new java.awt.event.ItemListener() {
@@ -200,37 +183,16 @@ public class Materiales extends javax.swing.JFrame {
                 tm2ItemStateChanged(evt);
             }
         });
-        Material2.add(tm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
-
-        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
-        panel2.setLayout(panel2Layout);
-        panel2Layout.setHorizontalGroup(
-            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 147, Short.MAX_VALUE)
-        );
-        panel2Layout.setVerticalGroup(
-            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-
-        Material2.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
+        Material2.add(tm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 90, -1));
 
         f2.setText("F");
         f2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material2.add(f2, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 135, -1, -1));
+        Material2.add(f2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
         txtf2.setText("0");
-        Material2.add(txtf2, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 132, 33, -1));
+        Material2.add(txtf2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 33, -1));
 
-        jCheckBox2.setText("Activar");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-        Material2.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
-
-        getContentPane().add(Material2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 380, 160));
+        getContentPane().add(Material2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 280, 160));
 
         Material3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         Material3.setToolTipText("");
@@ -238,39 +200,39 @@ public class Materiales extends javax.swing.JFrame {
         Material3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setText("Nombre");
-        Material3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 16, 56, -1));
+        Material3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 56, -1));
 
         jLabel14.setText("Tipo de material");
-        Material3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 59, 95, -1));
+        Material3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 95, -1));
 
         jLabel15.setText("R");
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 99, -1, -1));
+        Material3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
-        jTextField10.setText("201");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        r3.setText("0.8");
+        r3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                r3ActionPerformed(evt);
             }
         });
-        Material3.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 96, 33, -1));
+        Material3.add(r3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 33, -1));
 
         jLabel16.setText("G");
         jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 99, -1, -1));
+        Material3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
 
-        jTextField11.setText("201");
-        Material3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 96, 33, -1));
+        g3.setText("0.6");
+        Material3.add(g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 33, -1));
 
         jLabel17.setText("B");
         jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 99, -1, -1));
+        Material3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
 
-        jTextField12.setText("201");
-        Material3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 96, 33, -1));
+        b3.setText("0.5");
+        Material3.add(b3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 33, -1));
 
         jTextField13.setText("Iman");
-        Material3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 13, 92, -1));
+        Material3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 92, -1));
 
         tm3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal", "Roca", "Conductor" }));
         tm3.addItemListener(new java.awt.event.ItemListener() {
@@ -278,37 +240,16 @@ public class Materiales extends javax.swing.JFrame {
                 tm3ItemStateChanged(evt);
             }
         });
-        Material3.add(tm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 90, -1));
-
-        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
-        panel3.setLayout(panel3Layout);
-        panel3Layout.setHorizontalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 147, Short.MAX_VALUE)
-        );
-        panel3Layout.setVerticalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-
-        Material3.add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
+        Material3.add(tm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 90, -1));
 
         f3.setText("F");
         f3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Material3.add(f3, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 131, -1, -1));
+        Material3.add(f3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         txtf3.setText("0");
-        Material3.add(txtf3, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 128, 33, -1));
+        Material3.add(txtf3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 33, -1));
 
-        jCheckBox3.setText("Activar");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
-        Material3.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
-
-        getContentPane().add(Material3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 380, 160));
+        getContentPane().add(Material3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 270, 160));
 
         jButton1.setText("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -316,33 +257,21 @@ public class Materiales extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, -1, -1));
 
         getAccessibleContext().setAccessibleName("Materiales");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
 
     private void tm1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tm1ItemStateChanged
        if(tm1.getItemAt(1)!= "Metal"){
@@ -365,9 +294,17 @@ public class Materiales extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_tm3ItemStateChanged
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_r3ActionPerformed
+
+    private void txtf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtf1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtf1ActionPerformed
+
+    private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -408,13 +345,16 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JPanel Material1;
     private javax.swing.JPanel Material2;
     private javax.swing.JPanel Material3;
+    public static javax.swing.JTextField b1;
+    public static javax.swing.JTextField b2;
+    public static javax.swing.JTextField b3;
     private javax.swing.JLabel f1;
     private javax.swing.JLabel f2;
     private javax.swing.JLabel f3;
+    public static javax.swing.JTextField g1;
+    public static javax.swing.JTextField g2;
+    public static javax.swing.JTextField g3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -430,21 +370,12 @@ public class Materiales extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private java.awt.Panel panel1;
-    private java.awt.Panel panel2;
-    private java.awt.Panel panel3;
+    public static javax.swing.JTextField r1;
+    public static javax.swing.JTextField r2;
+    public static javax.swing.JTextField r3;
     private javax.swing.JComboBox<String> tm1;
     private javax.swing.JComboBox<String> tm2;
     private javax.swing.JComboBox<String> tm3;

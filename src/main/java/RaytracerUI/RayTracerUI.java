@@ -33,7 +33,7 @@ public class RayTracerUI extends javax.swing.JFrame {
         File archivo;
         byte[] imagen;
         FileOutputStream salida;
-        Config config = new Config(250, 16.0 / 9.0, 100, 50); 
+        Config config = new Config(Integer.parseInt(Configuracion.Ancho.getText()), Double.parseDouble(Configuracion.aspecto.getText()), Integer.parseInt(Configuracion.pixel.getText()), 50); 
     public RayTracerUI(Renderer renderer) {
         initComponents();
         this.renderer = renderer;
@@ -1020,7 +1020,7 @@ private void imagen(){
             Rx=Double.parseDouble(txt_Rx.getText());
             Ry=Double.parseDouble(txt_Ry.getText());
             Rz=Double.parseDouble(txt_Rz.getText());
-            this.scene = Scene.getUpdateScene(config, v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r,  Cx, Cy, Cz, Rx, Ry, Rz);
+            this.scene = Scene.getUpdateScene(false, config, v1x, v1y, v1z, v1r, v2x, v2y, v2z, v2r, v3x, v3y, v3z, v3r,  Cx, Cy, Cz, Rx, Ry, Rz);
             renderBuffer = renderer.render(this.scene);
             this.lb_imagen.setIcon(new ImageIcon(renderBuffer));
             

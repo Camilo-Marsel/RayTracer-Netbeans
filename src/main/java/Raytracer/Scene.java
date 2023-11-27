@@ -1,5 +1,6 @@
 package Raytracer;
 
+import RaytracerUI.Materiales;
 import java.util.ArrayList;
 
 public class Scene implements Hittable {
@@ -31,9 +32,9 @@ public class Scene implements Hittable {
    
   public static Scene getUpdateScene(boolean siono,Config config, double v1x, double v1y, double v1z, double v1r, double v2x, double v2y, double v2z, double v2r, double v3x, double v3y, double v3z, double v3r, double vectorX, double vectorY, double vectorZ, double directionX, double directionY, double directionZ) {
         Material materialGround = new LambertianMaterial(new double[]{0.8, 0.8, 0.0});
-        Material materialEsfera1 = new LambertianMaterial(new double[]{0.1, 0.2, 0.5});
-        Material materialEsfera2 = new LambertianMaterial(new double[]{0.84, 0.06, 0.34});
-        Material materialEsfera3 = new MetalMaterial(new double[]{0.8, 0.6, 0.2}, 0.0);
+        Material materialEsfera1 = new LambertianMaterial(new double[]{Double.parseDouble(Materiales.r1.getText()), Double.parseDouble(Materiales.g1.getText()), Double.parseDouble(Materiales.b1.getText())});
+        Material materialEsfera2 = new LambertianMaterial(new double[]{Double.parseDouble(Materiales.r2.getText()), Double.parseDouble(Materiales.g2.getText()), Double.parseDouble(Materiales.b2.getText())});
+        Material materialEsfera3 = new MetalMaterial(new double[]{Double.parseDouble(Materiales.r3.getText()), Double.parseDouble(Materiales.g3.getText()), Double.parseDouble(Materiales.b3.getText())}, 0.0);
 
         ArrayList<Hittable> objects = new ArrayList<>();
         if (siono) {
@@ -43,8 +44,8 @@ public class Scene implements Hittable {
         }
        
         objects.add(new Sphere(new Vector3D(v1x, v1y, v1z), v1r, materialEsfera1));
-        objects.add(new Sphere(new Vector3D(v2x, v2y, v2z), v2r, materialEsfera1));
-        objects.add(new Sphere(new Vector3D(v3x, v3y, v3z), v3r, materialEsfera1));
+        objects.add(new Sphere(new Vector3D(v2x, v2y, v2z), v2r, materialEsfera2));
+        objects.add(new Sphere(new Vector3D(v3x, v3y, v3z), v3r, materialEsfera3));
                 
         Vector3D lookFrom = new Vector3D(vectorX, vectorY, vectorZ);//posicion camara
         Vector3D lookAt = new Vector3D(directionX, directionY, directionZ);
